@@ -10,8 +10,8 @@ namespace Lab3_z3
             string unos = Console.ReadLine();
             string[] pojedinacniUnosi = unos.Split(" ");
 
-           
             List<int> brojevi = new List<int>();
+
             try
             {
                 foreach (var s in pojedinacniUnosi)
@@ -22,7 +22,6 @@ namespace Lab3_z3
                 Console.Write("Pogrešan/prazan unos.");
                 return;
             }
-
 
             var parni = brojevi.Where(broj => broj % 2 == 0).ToList();
             var neparni = brojevi.Where(broj => broj % 2 != 0).ToList();

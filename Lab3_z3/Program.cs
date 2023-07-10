@@ -10,9 +10,18 @@ namespace Lab3_z3
             string unos = Console.ReadLine();
             string[] pojedinacniUnosi = unos.Split(" ");
 
+           
             List<int> brojevi = new List<int>();
-            foreach (var s in pojedinacniUnosi)
-                brojevi.Add(Int32.Parse(s));
+            try
+            {
+                foreach (var s in pojedinacniUnosi)
+                    brojevi.Add(Int32.Parse(s));
+            }
+            catch(Exception e)
+            {
+                Console.Write("Pogrešan/prazan unos.");
+                return;
+            }
 
 
             var parni = brojevi.Where(broj => broj % 2 == 0).ToList();
